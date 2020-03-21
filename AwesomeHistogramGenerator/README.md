@@ -62,7 +62,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-* **Efthymia Kostaki** [EfthymiaKostaki](https://github.com/PurpleBooth)
+* **Efthymia Kostaki** [EfthymiaKostaki](https://github.com/EfthymiaKostaki)
 
 ## License
 
