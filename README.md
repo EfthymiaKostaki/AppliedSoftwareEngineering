@@ -71,7 +71,7 @@ Please keep in mind that some child projects require a system argument when runn
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 This project receives frequently technical reviews from the Management Science and Technology Lab Personnel of the Athens University of Economics and Business.
