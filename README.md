@@ -1,60 +1,65 @@
-# Project Title
+# Applied Software Engineering Lab Projects
 
-One Paragraph of project description goes here
+This is the main repository for delivery of all the individual projects for the course "Apllied Software Engineering".
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+**Maven 3.6.3**
+Maven distribution from Apache can be found here: [Install Maven](https://maven.apache.org/install.html)
+
+**JDK 1.8**
+Java SE Development Kit can be found here: [JDK Install](https://www.oracle.com/java/technologies/javase-downloads.html)
 ```
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+Open Git Bash and clone this repository
 
 ```
-Give the example
+git clone https://github.com/EfthymiaKostaki/AppliedSoftwareEngineering.git
 ```
 
-And repeat
+Build Maven Project by running:
 
 ```
-until finished
+mvn install
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Change to child directory of your preference
 
 ```
-Give an example
+cd childDirectory/
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+Change to target directory by
 
 ```
-Give an example
+cd target/
 ```
 
-## Deployment
+Locate the .jar file by running
 
-Add additional notes about how to deploy this on a live system
+```
+ls
+```
+
+Run the .jar project
+
+```
+java -jar jarFileExample.jar arg[0]
+
+```
+
+Please keep in mind that some child projects require a system argument when running the jar file while other do not. See the specific section for each project for more details.
 
 ## Built With
 
@@ -69,3 +74,4 @@ Add additional notes about how to deploy this on a live system
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
+This project receives frequently technical reviews from the Management Science and Technology Lab Personnel of the Athens University of Economics and Business.
