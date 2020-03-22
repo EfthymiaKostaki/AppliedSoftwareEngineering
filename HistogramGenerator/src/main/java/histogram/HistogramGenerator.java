@@ -102,7 +102,6 @@ public class HistogramGenerator {
 	 * @param grades ArrayList<Integer>.
 	 * @return ArrayList<Integer>.
 	 */
-	
 	private ArrayList<Integer> getFrequencies(ArrayList<Integer> grades) {
 		ArrayList<Integer> frequencyOfGrades = new ArrayList<Integer>();
 		for (int i = 0; i<=10; i++) {
@@ -119,12 +118,11 @@ public class HistogramGenerator {
 	
 	/***
 	 * Alters an ArrayList<String> to turn all values included in the ArrayList from String to
-	 * Integer. There is an error handling try...catch blick if that is not possible.
+	 * Integer. There is an error handling try...catch block if that is not possible.
 	 * 
 	 * @param stringArray ArrayList<String>.
 	 * @return ArrayList<Integer>.
 	 */
-	
 	private ArrayList<Integer> getIntegerArray(ArrayList<String> stringArray) {
         ArrayList<Integer> result = new ArrayList<Integer>();
         for(String stringValue : stringArray) {
