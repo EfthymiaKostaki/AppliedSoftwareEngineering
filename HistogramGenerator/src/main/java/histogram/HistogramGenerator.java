@@ -26,10 +26,12 @@ public class HistogramGenerator {
 		      File grades = new File(path);
 		      Scanner myReader = new Scanner(grades);
 		      while (myReader.hasNextLine()) {
+		    	  // parses file line by line
 		    	  gradesArray.add(myReader.nextLine()) ;
 		      }
 		      myReader.close();
 		    } catch (FileNotFoundException e) {
+		      // handle File not found exception
 		      System.out.println("An error occurred.");
 		      e.printStackTrace();
 		    }
@@ -40,12 +42,15 @@ public class HistogramGenerator {
 	}
 	
 	/***
-	 * Receives a single dimension Integer array. From this array the dataset
+	 * Receives an ArrayList of Integers. From this ArrayList the dataset
 	 * that will be used for the visualization is generated. Finally, The chart
-	 * is generated with the use of the aforementioned dataset and then
-	 * presented in the screen.
+	 * is generated and presented on a new screen.
 	 * 
-	 * @param dataValues Single dimension integer array
+	 * The output histogram represents the frequency of occurence of the students' grades.
+	 * More specifically, on the x-axis we have the possible grades [0,10]. 
+	 * On y-axis there are the number of occurences of each distinct grade.
+	 * 
+	 * @param dataValues ArrayList<Integer>
 	 */
 	public void generateChart(ArrayList<Integer> dataValues) {
 		/*
@@ -70,9 +75,9 @@ public class HistogramGenerator {
 		// add the series to the dataset
 		dataset.addSeries(data);
 
-		boolean legend = false; // do not visualize a legend
-		boolean tooltips = false; // do not visualize tooltips
-		boolean urls = false; // do not visualize urls
+		boolean legend = false; // doesn't visualize a legend
+		boolean tooltips = false; // doesn't not visualize tooltips
+		boolean urls = false; // doesn't visualize urls
 
 		// Declare and initialize a createXYLineChart JFreeChart
 		JFreeChart chart = ChartFactory.createXYLineChart("Histogram of students' grades", "grades", "grade frequence", dataset,
@@ -88,6 +93,16 @@ public class HistogramGenerator {
 		frame.setVisible(true);
 	}
 	
+	/***
+	 * Receives an ArrayList of Integers to calculate the 
+	 * number of occurances of the input of the given ArrayList.
+	 * The occurences are betweeen [0,10].
+	 * 
+	 * Returns an ArrayList of Integers
+	 * @param grades ArrayList<Integer>.
+	 * @return ArrayList<Integer>.
+	 */
+	
 	private ArrayList<Integer> getFrequencies(ArrayList<Integer> grades) {
 		ArrayList<Integer> frequencyOfGrades = new ArrayList<Integer>();
 		for (int i = 0; i<=10; i++) {
@@ -102,6 +117,14 @@ public class HistogramGenerator {
 		return 	frequencyOfGrades;
 	}
 	
+	/***
+	 * Alters an ArrayList<String> to turn all values included in the ArrayList from String to
+	 * Integer. There is an error handling try...catch blick if that is not possible.
+	 * 
+	 * @param stringArray ArrayList<String>.
+	 * @return ArrayList<Integer>.
+	 */
+	
 	private ArrayList<Integer> getIntegerArray(ArrayList<String> stringArray) {
         ArrayList<Integer> result = new ArrayList<Integer>();
         for(String stringValue : stringArray) {
@@ -109,7 +132,6 @@ public class HistogramGenerator {
                 //Convert String to Integer, and store it into integer array list.
                 result.add(Integer.parseInt(stringValue));
             } catch(NumberFormatException nfe) {
-               //System.out.println("Could not parse " + nfe);
                 System.out.println("Parsing failed! " + stringValue + " can not be an integer");
             } 
         }       
