@@ -14,7 +14,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 /***
  * 
  * @author EfthymiaKostaki The purpose of this class is to 
- *         read a file with students’
+ *         read a file with students
 *          grades and generate its histogram.
  */
 public class HistogramGenerator {
