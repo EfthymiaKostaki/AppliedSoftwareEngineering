@@ -35,7 +35,8 @@ public class HistogramGenerator {
 		    }
 		HistogramGenerator hg = new HistogramGenerator();
 		ArrayList<Integer> grades = hg.getIntegerArray(gradesArray);
-		hg.generateChart(grades);
+		ArrayList<Integer> frequencyOfGrades = hg.getFrequencies(grades);
+		hg.generateChart(frequencyOfGrades);
 	}
 	
 	/***
@@ -74,17 +75,31 @@ public class HistogramGenerator {
 		boolean urls = false; // do not visualize urls
 
 		// Declare and initialize a createXYLineChart JFreeChart
-		JFreeChart chart = ChartFactory.createXYLineChart("Chart title", "x_axis title", "y_axis_title", dataset,
+		JFreeChart chart = ChartFactory.createXYLineChart("Histogram of students' grades", "grades", "grade frequence", dataset,
 				PlotOrientation.VERTICAL, legend, tooltips, urls);
 
 		/*
 		 * Initialize a frame for visualizing the chart and attach the
 		 * previously created chart.
 		 */
-		ChartFrame frame = new ChartFrame("First", chart);
+		ChartFrame frame = new ChartFrame("Histogram", chart);
 		frame.pack();
 		// makes the previously created frame visible
 		frame.setVisible(true);
+	}
+	
+	private ArrayList<Integer> getFrequencies(ArrayList<Integer> grades) {
+		ArrayList<Integer> frequencyOfGrades = new ArrayList<Integer>();
+		for (int i = 0; i<=10; i++) {
+			int numberOfOccurences = 0;
+			for  (int j = 0; j < grades.size(); j++) {
+				if (grades.get(j) == i) {
+					numberOfOccurences++;
+				}
+			}
+			frequencyOfGrades.add(numberOfOccurences);
+		}
+		return 	frequencyOfGrades;
 	}
 	
 	private ArrayList<Integer> getIntegerArray(ArrayList<String> stringArray) {
