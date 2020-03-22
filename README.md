@@ -11,12 +11,14 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-**Maven 3.6.3**
+Maven 3.6.3
+```
 Maven distribution from Apache can be found here: [Install Maven](https://maven.apache.org/install.html)
 
-**JDK 1.8**
-Java SE Development Kit can be found here: [JDK Install](https://www.oracle.com/java/technologies/javase-downloads.html)
 ```
+JDK 1.8
+```
+Java SE Development Kit can be found here: [JDK Install](https://www.oracle.com/java/technologies/javase-downloads.html)
 
 ### Installing
 
