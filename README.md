@@ -69,7 +69,7 @@ java -jar jarFileExample.jar arg[0]
 
 Please keep in mind that some child projects require a system argument when running the jar file while other do not. See the specific section for each project for more details.
 
-##HistogramGenerator
+## HistogramGenerator
 
 A JAVA application for creating a histogram of the frequency of given grades. The path to the grades file is given as a system argument input.
 
