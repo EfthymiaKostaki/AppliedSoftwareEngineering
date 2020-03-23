@@ -1,6 +1,6 @@
 # Applied Software Engineering Lab Projects
 
-This is the main repository for delivery of all the individual projects for the course "Apllied Software Engineering".
+This is the main repository for delivery of all the individual projects for the course "Applied Software Engineering".
 
 ## Getting Started
 
