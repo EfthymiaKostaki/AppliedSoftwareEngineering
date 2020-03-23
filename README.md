@@ -30,6 +30,12 @@ Open Git Bash and clone this repository
 git clone https://github.com/EfthymiaKostaki/AppliedSoftwareEngineering.git
 ```
 
+Change to the main repository by running
+
+```
+cd AppliedSoftwareEngineering
+```
+
 Build Maven Project by running:
 
 ```
