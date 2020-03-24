@@ -20,46 +20,25 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.4</version>
+				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
 					<archive>
 						<manifest>
-							<classpathPrefix>lib/</classpathPrefix>
-							<addClasspath>true</addClasspath>
-							<!-- replace this with the class that contains the main method. It 
-								requires also the package name if exists. -->
-							<mainClass>histogram.HistogramGenerator</mainClass>
+							<!-- replace this with the class that contains the main method. It requires also the package name if exists. -->
+							<mainClass>histogram.HistogramGenerator</mainClass> 
 						</manifest>
 					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.4</version>
 				<executions>
 					<execution>
-						<id>copy</id>
-						<phase>install</phase>
+						<id>make-assembly</id>
+						<phase>package</phase>
 						<goals>
-							<goal>copy-dependencies</goal>
+							<goal>single</goal>
 						</goals>
-						<configuration>
-							<outputDirectory>
-								${project.build.directory}/lib
-							</outputDirectory>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
