@@ -60,7 +60,7 @@ Locate the .jar file by running
 ls
 ```
 
-Run the .jar project
+Run the .jar project with an argument if needed.
 
 ```
 java -jar jarFileExample.jar arg[0]
@@ -79,6 +79,15 @@ After running the commands mentioned to run the .jar project, where arg[0] can b
 java -jar HistogramGenerator/target/HistogramGenerator-0.0.1-SNAPSHOT.jar arg[0]
 ```
 
+## Unit Testing
+
+A JAVA application for the Unit Testing practice project. This is a project for practicing Unit Testing.
+
+After running the commands mentioned to run the .jar project: 
+
+```
+java -jar unittesting/target/unittesting-0.0.1-SNAPSHOT.jar 
+```
 
 ## Built With
 
