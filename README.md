@@ -69,6 +69,13 @@ java -jar jarFileExample.jar arg[0]
 
 Please keep in mind that some child projects require a system argument when running the jar file while other do not. See the specific section for each project for more details.
 
+## Project Structure
+
+This repository consists of a parent Maven project and three sub-project (modules), that handle the dependencies in a different way.
+
+1) [Histogram Generator](histogramgenerator) - creates a histogram from a given set of numbers
+2) [Unit Testing](unittesting) - a project for practicing Unit Testing
+
 ## HistogramGenerator
 
 A JAVA application for creating a histogram of the frequency of given grades. The path to the grades file is given as a system argument input.
