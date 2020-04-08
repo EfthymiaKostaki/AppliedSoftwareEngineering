@@ -1,5 +1,7 @@
 # Applied Software Engineering Lab Projects
 
+https://travis-ci.com/EfthymiaKostaki/AppliedSoftwareEngineering.svg?token=AvLEFzGby86rqSftyr5s&branch=master
+
 This is the main repository for delivery of all the individual projects for the course "Applied Software Engineering".
 
 ## Getting Started
