@@ -73,7 +73,7 @@ Please keep in mind that some child projects require a system argument when runn
 
 This repository consists of a parent Maven project and three sub-project (modules), that handle the dependencies in a different way.
 
-1) [Histogram Generator](histogramgenerator) - creates a histogram from a given set of numbers
+1) [Histogram Generator](HistogramGenerator) - creates a histogram from a given set of numbers
 2) [Unit Testing](unittesting) - a project for practicing Unit Testing
 
 ## HistogramGenerator
