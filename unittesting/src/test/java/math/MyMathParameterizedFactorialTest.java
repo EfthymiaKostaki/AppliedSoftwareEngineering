@@ -16,7 +16,7 @@ import org.junit.Assert;
  */
 
 @RunWith(Parameterized.class)
-public class MyMathTest {
+public class MyMathParameterizedFactorialTest {
 	
 	@Parameter (value = 0) 
 	public int factorialNumber;
