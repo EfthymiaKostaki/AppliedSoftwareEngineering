@@ -44,14 +44,26 @@ public class ArithmeticOperationsTest {
 	
 	/*
 	 * A test case for the exceptions caused when
-	 * one or more input values are negative. Testing
+	 * X input value is negative. Testing
 	 * the exception is performed with a @Rule
 	 */
 	@Test 
-	public void testMultiplyShouldThrowExceptionOnNegativeInputOfOneOrTwoParameters() {
+	public void testXMultiplyShouldThrowExceptionOnNegativeInputOfOneOrTwoParameters() {
 		thrown.expect(IllegalArgumentException.class);
 		thrown.expectMessage("x & y should be >= 0");
 		am.multiply(-6, 2);
+	}
+	
+	/*
+	 * A test case for the exceptions caused when
+	 * Y input value is negative. Testing
+	 * the exception is performed with a @Rule
+	 */
+	@Test 
+	public void testYMultiplyShouldThrowExceptionOnNegativeInputOfOneOrTwoParameters() {
+		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("x & y should be >= 0");
+		am.multiply(6, -2);
 	}
 	
 	/*
