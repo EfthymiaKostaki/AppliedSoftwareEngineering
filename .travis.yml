@@ -10,4 +10,4 @@ branches:
   - development
 
 script: 
-  - mvn clean package
+  - mvn clean package jacoco:report
