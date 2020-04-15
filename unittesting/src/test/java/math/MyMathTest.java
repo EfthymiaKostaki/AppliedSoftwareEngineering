@@ -22,7 +22,7 @@ public class MyMathTest {
 	public int factorialNumber;
 	
 	@Parameter (value = 1)
-	public long result;
+	public int result;
 	
 	MyMath mm = new MyMath();
 	
@@ -32,7 +32,7 @@ public class MyMathTest {
 	 */
 	@Parameters
 	public static Collection<Object[]> data() {
-		Object[][] data = new Object[][]{{0,1},{1,1},{2,2},{20,2432902008176640000L}};
+		Object[][] data = new Object[][]{{0,1},{1,1},{2,2},{12,479001600}};
 		
 		return Arrays.asList(data);
 	}

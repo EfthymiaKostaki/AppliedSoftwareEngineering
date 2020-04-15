@@ -8,8 +8,8 @@ package math;
  */
 public class MyMath {
  
-	public long factorial(int n) {
-		if (n < 0 || n > 20) {
+	public int factorial(int n) {
+		if (n < 0 || n > 12) {
 			throw new IllegalArgumentException("n cannot be less than 0 or greater than 20");
 		} else if (n == 1){
 		    return n;
