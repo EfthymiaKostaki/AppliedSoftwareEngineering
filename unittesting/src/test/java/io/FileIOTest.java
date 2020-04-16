@@ -8,7 +8,6 @@ import org.junit.rules.ExpectedException;
 import math.MyMath;
 
 import static org.junit.Assert.assertArrayEquals;
-import static org.mockito.Mockito.*;
 
 public class FileIOTest {
 	
