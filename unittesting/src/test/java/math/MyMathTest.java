@@ -36,4 +36,33 @@ public class MyMathTest {
     public void testPositiveFactorialGreaterThan12ShouldCauseAnException() {
     	mm.factorial(13);
     }
+    
+    /*
+	 * A unit test that checks an invalid input
+	 * that causes an IllegalArgumentException
+	 */
+    @Test (expected = IllegalArgumentException.class)
+    public void testNumberLessThanTwoShouldCauseAnException() {
+    	mm.isPrime(-1);
+    }  
+    
+    /*
+	 * A unit test that checks a valid input
+	 * which is a prime number
+	 */
+    @Test
+    public void testIsPrimeNumber() {
+    	boolean expected = true;
+    	Assert.assertEquals(expected, mm.isPrime(97));
+    }  
+    
+    /*
+	 * A unit test that checks an invalid input
+	 * which is not a prime number
+	 */
+    @Test
+    public void testIsNotPrimeNumber() {
+    	boolean expected = false;
+    	Assert.assertEquals(expected, mm.isPrime(14));
+    }  
 }
