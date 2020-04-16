@@ -13,7 +13,7 @@ public class MyMathTest {
 	
 	/*
 	 * This is a constructor which is called 
-	 * when the MyAdvancedMathTest class is initialized
+	 * when the MyMathTest class is initialized
 	 */
 	public MyMathTest() {
 		this.mm = new MyMath();
