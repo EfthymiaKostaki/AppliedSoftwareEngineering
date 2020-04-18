@@ -6,32 +6,33 @@ A JAVA application for the Unit Testing practice project. This is a project for 
 
 A step by step series of examples that tell you how to get a development env running
 
-Build Maven Project by running:
+Since there is no main method in the unittesting module,
+
+to run the tests, use this command:
 
 ```
-mvn install
+mvn test
 ```
 
-Change to child directory of your preference
+You should now be able to see which tests are passing the tests.
+
+If you want to explore the code coverage of the project run:
 
 ```
-cd HistogramGenerator/
+mavn test jacoco:report
 ```
 
-Change to target directory by
+Change to unittesting module by running:
 
 ```
-cd target/
+cd unittesting/
 ```
 
-Locate the .jar file by running
+Change to jacoco folder by running:
 
 ```
-ls
+cd target/site/jacoco
 ```
 
-Run the .jar project
-
-```
-java -jar unittesting/target/unittesting-0.0.1-SNAPSHOT.jar
-```
+There you should see an index.html file. If you open this file on browser
+you will be able to explore the code coverage of the unittesting module.
