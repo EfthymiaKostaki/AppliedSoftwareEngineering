@@ -23,6 +23,14 @@ public class ArithmeticOperationsTest {
     }
 	
 	/*
+	 * A unit test that checks a valid zero numerator input
+	 */
+	@Test
+    public void testDevideNumeratorZeroShouldReturnDevidedNumber() {
+    	Assert.assertEquals(0.0, am.divide(0,2), 0);
+    }
+	
+	/*
 	 * A unit test that checks an invalid zero input
 	 * that causes an ArithmeticException
 	 */
