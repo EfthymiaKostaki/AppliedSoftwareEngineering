@@ -52,7 +52,7 @@ public class ArithmeticOperationsTest {
 	 * for the method multiply
 	 */
 	@Test
-    public void testMultiplyZeroShouldReturnMultipliedNumber() {
+    public void testMultiplyXZeroShouldReturnMultipliedNumber() {
     	Assert.assertEquals(0.0, am.multiply(0,2), 0);
     }
 	
@@ -67,7 +67,7 @@ public class ArithmeticOperationsTest {
 	@Test 
 	public void testXMultiplyShouldThrowExceptionOnNegativeInputOfOneOrTwoParameters() {
 		thrown.expect(IllegalArgumentException.class);
-		thrown.expectMessage("x should be >= 0 and y should be > 0");
+		thrown.expectMessage("x & y should be >= 0");
 		am.multiply(-6, 2);
 	}
 	
@@ -79,32 +79,25 @@ public class ArithmeticOperationsTest {
 	@Test 
 	public void testYMultiplyShouldThrowExceptionOnNegativeInputOfOneOrTwoParameters() {
 		thrown.expect(IllegalArgumentException.class);
-		thrown.expectMessage("x should be >= 0 and y should be > 0");
+		thrown.expectMessage("x & y should be >= 0");
 		am.multiply(6, -2);
 	}
 	
 	/*
-	 * A test case for the exceptions caused when
-	 * Y input value is zero. Testing
-	 * the exception is performed with a @Rule
+	 * A test case for multiplying when y is zero.
 	 */
 	@Test 
-	public void testYMultiplyShouldThrowExceptionOnZeroInput() {
-		thrown.expect(IllegalArgumentException.class);
-		thrown.expectMessage("x should be >= 0 and y should be > 0");
-		am.multiply(6, 0);
+	public void testYMultiplyOnZeroInput() {
+		Assert.assertEquals(0.0, am.multiply(2,0), 0);
 	}
 	
 	/*
 	 * A test case for the exceptions caused when
-	 * Y input value is negative. Testing
-	 * the exception is performed with a @Rule
+	 * Y input value and X input value is zero
 	 */
 	@Test 
-	public void testZeroValuesMultiplyShouldThrowException() {
-		thrown.expect(IllegalArgumentException.class);
-		thrown.expectMessage("x should be >= 0 and y should be > 0");
-		am.multiply(0, 0);
+	public void testZeroValuesMultiply() {
+		Assert.assertEquals(0.0, am.multiply(0,0), 0);
 	}
 	
 	/*

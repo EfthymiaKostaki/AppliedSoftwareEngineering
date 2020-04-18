@@ -30,12 +30,14 @@ public class ArithmeticOperations {
 	 * @param x the first input
 	 * @param y the second input
 	 * @return the product of the multiplication
-	 * @exception IllegalArgumentException when <b>x</b> or <b>y</b> are negative numbers 
+	 * @exception IllegalArgumentException when x or y are negative numbers 
 	 * @exception IllegalArgumentException when the product does not fit in an Integer variable 
 	 */
 	public int multiply(int x, int y) {
-		if (x < 0 || y <= 0) {
-			throw new IllegalArgumentException("x should be >= 0 and y should be > 0");
+		if (x < 0 || y < 0) {
+			throw new IllegalArgumentException("x & y should be >= 0");
+		} else if (y==0) {
+			return 0;
 		} else if (x <= Integer.MAX_VALUE/y) {
 			return x*y;			
 		} else {
