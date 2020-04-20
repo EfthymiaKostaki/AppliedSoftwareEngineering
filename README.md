@@ -1,5 +1,7 @@
 # Applied Software Engineering Lab Projects
 
+[![Build Status](https://travis-ci.com/EfthymiaKostaki/AppliedSoftwareEngineering.svg?token=AvLEFzGby86rqSftyr5s&branch=development)](https://travis-ci.com/EfthymiaKostaki/AppliedSoftwareEngineering)
+
 This is the main repository for delivery of all the individual projects for the course "Applied Software Engineering".
 
 ## Getting Started
@@ -60,7 +62,7 @@ Locate the .jar file by running
 ls
 ```
 
-Run the .jar project
+Run the .jar project with an argument if needed.
 
 ```
 java -jar jarFileExample.jar arg[0]
@@ -68,6 +70,13 @@ java -jar jarFileExample.jar arg[0]
 ```
 
 Please keep in mind that some child projects require a system argument when running the jar file while other do not. See the specific section for each project for more details.
+
+## Project Structure
+
+This repository consists of a parent Maven project and three sub-project (modules), that handle the dependencies in a different way.
+
+1) [Histogram Generator](HistogramGenerator) - creates a histogram from a given set of numbers
+2) [Unit Testing](unittesting) - a project for practicing Unit Testing
 
 ## HistogramGenerator
 
@@ -79,6 +88,15 @@ After running the commands mentioned to run the .jar project, where arg[0] can b
 java -jar HistogramGenerator/target/HistogramGenerator-0.0.1-SNAPSHOT.jar arg[0]
 ```
 
+## Unit Testing
+
+A JAVA application for the Unit Testing practice project. This is a project for practicing Unit Testing.
+
+After running the commands mentioned to run the .jar project: 
+
+```
+java -jar unittesting/target/unittesting-0.0.1-SNAPSHOT.jar 
+```
 
 ## Built With
 
