@@ -51,10 +51,10 @@ public class MetricsExporterTest {
 		//just verify that the method was executed/called
 		verify(mockedExporter).writeFile("json", metrics, outputFilepath);
 	}
+*/
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void testWriteFileWithUknownFIleType() {
 		mex.writeFile("non-existing-type", null, null);
 	}
-*/
 }
