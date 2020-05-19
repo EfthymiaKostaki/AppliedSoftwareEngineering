@@ -77,6 +77,7 @@ This repository consists of a parent Maven project and three sub-project (module
 
 1) [Histogram Generator](HistogramGenerator) - creates a histogram from a given set of numbers
 2) [Unit Testing](unittesting) - a project for practicing Unit Testing
+3) [Source Code Analyzer](SourceCodeAnalyzer) - a project for applying design patterns
 
 ## HistogramGenerator
 
@@ -97,6 +98,23 @@ After running the commands mentioned to run the .jar project:
 ```
 java -jar unittesting/target/unittesting-0.0.1-SNAPSHOT.jar 
 ```
+
+## Source Code Analyzer
+
+A JAVA application that reads a Java source code file that is stored locally or on the
+web, calculates the LOC, NOM and NOC metrics and finally, exports these metrics to an output file.
+
+You can execute the system (after building with maven) with the following command:
+
+```
+java –jar “jar-with-dependencies” arg0 arg1 arg2 arg3 arg4
+```
+where: 
+	arg0 = “JavaSourceCodeInputFile” (e.g., src/test/resources/TestClass.java)
+	arg1 = “sourceCodeAnalyzerType” [regex|strcomp]
+	arg2 = “SourceCodeLocationType” [local|web]
+	arg3 = “OutputFilePath” (e.g., ../output_metrics_file)
+	arg4 = “OutputFileType” [csv|json]
 
 ## Built With
 
