@@ -37,7 +37,7 @@ public class MetricsExporterTest {
 		// delete the generated file
 		outputFile.delete();
 	}
-/*	
+
 	@Test
 	public void testWriteJson() {
 		MetricsExporter mockedExporter = mock(MetricsExporter.class);
@@ -51,7 +51,7 @@ public class MetricsExporterTest {
 		//just verify that the method was executed/called
 		verify(mockedExporter).writeFile("json", metrics, outputFilepath);
 	}
-*/
+
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void testWriteFileWithUknownFIleType() {
