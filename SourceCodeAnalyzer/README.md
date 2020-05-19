@@ -1,8 +1,40 @@
-1. Build the executable Java application with: 
-	mvn package jacoco:report
+## Source Code Analyzer 
 
-2. Run the executable by executing
-	java –jar “jar-with-dependencies” arg0 arg1 arg2 arg3 arg4
+A JAVA application that reads a Java source code file that is stored locally or on the web, 
+calculates the LOC, NOM and NOC metrics and finally, exports these metrics to an output file.
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Build Maven Project by running:
+
+```
+mvn install
+```
+
+Change to child directory of your preference
+
+```
+cd SourceCodeAnalyzer/
+```
+
+Change to target directory by
+
+```
+cd target/
+```
+
+Locate the .jar file by running
+
+```
+ls
+```
+
+Run the executable by executing
+```
+java –jar “jar-with-dependencies” arg0 arg1 arg2 arg3 arg4
+```
 were args translate to: 	
 	arg0 = “JavaSourceCodeInputFile” (e.g., src/test/resources/TestClass.java)
 	arg1 = “sourceCodeAnalyzerType” [regex|strcomp]
