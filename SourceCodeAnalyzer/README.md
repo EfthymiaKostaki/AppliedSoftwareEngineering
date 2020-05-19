@@ -47,3 +47,10 @@ Below there is an example:
 java –jar ./target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./src/test/resources/TestClass.java regex local metrics_results csv
 ```
 
+### Design Patterns used in this module
+
+#### Facade Pattern
+
+**Benefits**
+**Tradeoffs**
+
