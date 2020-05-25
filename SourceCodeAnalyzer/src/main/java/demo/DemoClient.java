@@ -1,10 +1,8 @@
 package demo;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
-import codeanalyzer.*;
+import codeanalyzer.FacadeAnalyzer;
 
 public class DemoClient {
 
