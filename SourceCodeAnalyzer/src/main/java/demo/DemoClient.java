@@ -4,6 +4,14 @@ import java.io.IOException;
 
 import codeanalyzer.FacadeAnalyzer;
 
+/**
+ * This is the Demo class of the project which has the main method.
+ * 
+ * @author Efthymia Kostaki
+ * @version 1.0
+ * @since   2020-05-25 
+ */
+
 public class DemoClient {
 
 	public static void main(String[] args) throws IOException {
