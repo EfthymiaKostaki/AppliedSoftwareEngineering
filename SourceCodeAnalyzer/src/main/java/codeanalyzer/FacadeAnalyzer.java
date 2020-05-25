@@ -1,8 +1,15 @@
 package codeanalyzer;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
+
+import codeanalyzer.fileExporter.ExporterFactory;
+import codeanalyzer.fileExporter.FileExporter;
+import codeanalyzer.sourceCodeAnalyzer.AnalyzerFactory;
+import codeanalyzer.sourceCodeAnalyzer.AnalyzerManagement;
+import codeanalyzer.sourceCodeAnalyzer.SourceCodeAnalyzer;
+import codeanalyzer.sourceFileReader.FileReaderFactory;
+import codeanalyzer.sourceFileReader.SourceFileReader;
 
 public class FacadeAnalyzer {
 	String filepath;
@@ -11,7 +18,8 @@ public class FacadeAnalyzer {
 	String outputFilePath;
 	String outputFileType;
 	
-	public FacadeAnalyzer(String filepath, String sourceCodeAnalyzerType, String sourceFileLocation,
+	public FacadeAnalyzer(String filepath, String sourceCodeAnalyzerType, 
+			String sourceFileLocation,
 			String outputFilePath, String outputFileType) {
 		this.filepath = filepath;
 		this.sourceCodeAnalyzerType = sourceCodeAnalyzerType;
@@ -21,18 +29,18 @@ public class FacadeAnalyzer {
 	}
 	
 	public void analyze() throws IOException {
-		SourceCodeAnalyzer analyzer = new SourceCodeAnalyzer(sourceFileLocation);
-		int loc = analyzer.calculateLOC(filepath, sourceCodeAnalyzerType);
-		int nom = analyzer.calculateNOM(filepath, sourceCodeAnalyzerType);
-		int noc = analyzer.calculateNOC(filepath, sourceCodeAnalyzerType);
-		
-		Map<String, Integer> metrics = new HashMap<>();
-		metrics.put("loc",loc);
-		metrics.put("nom",nom);
-		metrics.put("noc",noc);
+		AnalyzerFactory analyzerFactory = new AnalyzerFactory();
+		FileReaderFactory fileReaderFactory = new FileReaderFactory();
+		SourceFileReader sourceFileReader = fileReaderFactory.createFileReader(sourceFileLocation);
+		SourceCodeAnalyzer sourceCodeAnalyzer = analyzerFactory.createSourceCodeAnalyzer
+				(sourceFileReader, sourceCodeAnalyzerType);
+		AnalyzerManagement analyzerManagement = new AnalyzerManagement();
+		Map<String, Integer> metrics = analyzerManagement.calculateMetrics
+				(sourceCodeAnalyzer, filepath);
 				
-		MetricsExporter exporter = new MetricsExporter();
-		exporter.writeFile(outputFileType, metrics, outputFilePath);
+		ExporterFactory exporterFactory = new ExporterFactory();
+		FileExporter fileExporter = exporterFactory.createFileExporter(outputFileType);
+		fileExporter.writeFile(metrics, filepath);
 	}
 
 }
