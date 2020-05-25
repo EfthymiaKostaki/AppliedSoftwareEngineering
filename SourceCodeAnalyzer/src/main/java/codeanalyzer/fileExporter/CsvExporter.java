@@ -5,7 +5,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * A class which implements the FileExporter interface which
+ * gives the ability to write in a CSV file.
+ * 
+ * @author EfthymiaKostaki
+ * @version 1.0
+ * @since   2020-05-25 
+ */
 public class CsvExporter implements FileExporter{
+	
+	/**
+	 * This method overrides the abstract method writeFile which
+	 * gives the ability to write in a CSV file.
+	 * 
+	 * @param metrics A map which contains all the data of the metrics.
+	 * @param filepath The path were the file will be exported to.
+	 */
 	@Override
 	public void writeFile(Map<String, Integer> metrics, String filepath) {
 		File outputFile = new File(filepath + ".csv");
