@@ -49,7 +49,7 @@ java –jar SourceCodeAnalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./src/te
 ## Class Diagram
 This is the Class Diagram of this module.
 
-![class diagram](/images/classDiagram.png "Class Diagram")
+![class diagram](SourceCodeAnalyzer/images/classDiagram.png "Class Diagram")
 
 ## Design Patterns used in this module
 
