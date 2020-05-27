@@ -26,7 +26,7 @@ public class AnalyzerFactory {
 		} else if (sourceCodeAnalyzerType.equals("strcomp")) {
 			sourceCodeAnalyzer = new StrCompAnalyzer(sourceFileReader);
 		} else {
-			return null;
+			throw new IllegalArgumentException("Unknown type : " + sourceCodeAnalyzerType);
 		}
 		return sourceCodeAnalyzer;
 	}

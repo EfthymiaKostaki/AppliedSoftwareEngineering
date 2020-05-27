@@ -22,9 +22,8 @@ public class AnalyzerFactoryTest {
 		Assert.assertTrue(sourceCodeAnalyzer instanceof  StrCompAnalyzer);
 	}
 	
-	@Test
-	public void testCreateFileExporterUnknown() {
-		SourceCodeAnalyzer sourceCodeAnalyzer = analyzerFactory.createSourceCodeAnalyzer(sourceFileReader,"non-existing");
-		Assert.assertNull(sourceCodeAnalyzer);
+	@Test(expected = IllegalArgumentException.class)
+	public void testCreateSourceFileAnalyzerUnknown() {
+		analyzerFactory.createSourceCodeAnalyzer(sourceFileReader,"non-existing");
 	}
 }
