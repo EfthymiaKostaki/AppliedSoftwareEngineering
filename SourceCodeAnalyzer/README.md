@@ -33,7 +33,7 @@ ls
 
 Run the executable by executing
 ```
-java –jar  SourceCodeAnalyzer/target/SourceCodeAnalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar arg0 arg1 arg2 arg3 arg4
+java –jar  SourceCodeAnalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar arg0 arg1 arg2 arg3 arg4
 ```
 were args translate to: 	
 + arg0 = “JavaSourceCodeInputFile” (e.g., src/test/resources/TestClass.java)
