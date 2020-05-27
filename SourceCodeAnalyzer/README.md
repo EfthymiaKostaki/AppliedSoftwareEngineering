@@ -1,9 +1,9 @@
-## Source Code Analyzer 
+# Source Code Analyzer 
 
 A JAVA application that reads a Java source code file that is stored locally or on the web, 
 calculates the LOC, NOM and NOC metrics and finally, exports these metrics to an output file.
 
-### Installing
+## Installing
 
 A step by step series of examples that tell you how to get a development env running
 
@@ -47,11 +47,12 @@ Below there is an example:
 java –jar SourceCodeAnalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./src/test/resources/TestClass.java regex local metrics_results csv
 ```
 
-### Design Patterns used in this module
+## Design Patterns used in this module
 
-#### Facade Pattern
+### Facade Pattern
 
-**Benefits**
+
+#### Benefits
 1. According to the requirements, the plan is to use the system as an independent library and thus hide any
 implementation details from the DemoClient. This requirement is fully covered with the created FacadeAnalyzer class.
 2. Since the codeAnalyzer package is a complex system with many different objects such as FileExporters, SourceFileReaders and SourceCodeAnalyzers, the 
@@ -61,7 +62,25 @@ subsystems, thereby promoting subsystem independence and portability.
 4. codeAnalyzer package which is a system can now be used as an independent library which can be used by a project as the main system or as a subsystem
 and communicate easily with other packages through the FacadeAnalyzer class.
 
-**Tradeoffs**
+#### Tradeoffs
 This implementation of the facade pattern doesn't force us to unwanted tradeoffs, because it only adds additional layers of abstraction.
 Sometimes the pattern can be overused in simple scenarios, which will lead to redundant implementations but this is not the case in this situation 
 since it was explicitly specified in the requirements of the system.
+
+###Strategy Pattern
+
+#### Benefits
+
+#### Tradeoffs
+
+### Bridge Pattern
+
+#### Benefits
+
+#### Tradeoffs
+
+## Design patterns not used in this module and why
+
+### Null Object Pattern
+
+### Composite Pattern
