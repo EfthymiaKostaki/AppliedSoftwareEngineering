@@ -3,6 +3,14 @@
 A JAVA application that reads a Java source code file that is stored locally or on the web, 
 calculates the LOC, NOM and NOC metrics and finally, exports these metrics to an output file.
 
+## Contents:
+
+1. [Installing](#installing)
+2. [Class Diagram](#class-diagram)
+3. [SOLID Principles](solid-principles)
+4. [Design Patterns used in this module](#design-patterns-used-in-this-module)
+5. [Design patterns not used in this module and why](#design-patterns-not-used-in-this-module-and-why)
+
 ## Installing
 
 A step by step series of examples that tell you how to get a development env running
