@@ -46,6 +46,10 @@ Below there is an example:
 ```
 java –jar SourceCodeAnalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./src/test/resources/TestClass.java regex local metrics_results csv
 ```
+## Class Diagram
+This is the Class Diagram of this module.
+
+![class diagram](/images/classDiagram.png "Class Diagram")
 
 ## Design Patterns used in this module
 
