@@ -55,7 +55,7 @@ This is the Class Diagram of this module.
 
 ### Facade Pattern
 The FacadeAnalyzer class serves as a front-facing interface masking more complex underlying or
-structural code of codeanalyzer subpackages. 
+structural code of codeanalyzer subpackages. All classes in the subpackages of codeanalyzer package are inside in the library.
 
 #### Benefits
 1. According to the requirements, the plan is to use the system as an independent library and thus hide any
@@ -86,6 +86,9 @@ since it was explicitly specified in the requirements of the system.
 
 ## Design patterns not used in this module and why
 
-### Null Object Pattern
+### Null Object 
 
-### Composite Pattern
+The Null Object was not used in this module because the tradeoffs outweighted the benefits. 
+1. Instead of throwing errors in the Factory class we would have to do it in the Null Object class and this would result in code repitition
+since each method would have to throw an Exception. Instead, we chose to avoid that and throw an Exception in the Factory class.
+2. Testing Efficience. It is more efficient and thus limit errors to test the Exception from the Factory class.
