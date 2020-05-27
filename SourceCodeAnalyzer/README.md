@@ -52,14 +52,15 @@ java –jar ./target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar
 #### Facade Pattern
 
 **Benefits**
-1. According to the requirements the plan is to use the system as an independent library and thus hide any
+1. According to the requirements, the plan is to use the system as an independent library and thus hide any
 implementation details from the DemoClient. This requirement is fully covered with the created FacadeAnalyzer class.
-2. Since, codeAnalyzer is a complex system with many different objects such as FileExporters, SourceFileReaders and SourceCodeAnalyzers the 
+2. Since the codeAnalyzer package is a complex system with many different objects such as FileExporters, SourceFileReaders and SourceCodeAnalyzers, the 
 FacadeAnalyzer class provides a simple interface to this complex system.
-3. Since, FacadeAnalyzer separates the DemoClient from implementation details, the applied Facade pattern de-couples the subsystem for clients and other
+3. Since the FacadeAnalyzer class separates the DemoClient from implementation details, the applied Facade pattern de-couples the subsystem for clients and other
 subsystems, thereby promoting subsystem independence and portability.
-4. codeAnalyzer package which is a system can now be used as an independent library to be used by a project as the main system or as a subsystem
+4. codeAnalyzer package which is a system can now be used as an independent library which can be used by a project as the main system or as a subsystem
 and communicate easily with other packages through the FacadeAnalyzer class.
+
 **Tradeoffs**
 This implementation of the facade pattern doesn't force us to unwanted tradeoffs, because it only adds additional layers of abstraction.
 Sometimes the pattern can be overused in simple scenarios, which will lead to redundant implementations but this is not the case in this situation 
