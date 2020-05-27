@@ -7,12 +7,28 @@ import java.util.regex.Pattern;
 
 import codeanalyzer.sourceFileReader.SourceFileReader;
 
+/**
+ * A class which extends the SourceCodeAnalyzer class for implementing
+ * abstract specific methods using Regex.
+ * 
+ * @author EfthymiaKostaki
+ * @version 1.0
+ * @since   2020-05-25 
+ */
 public class RegexAnalyzer extends SourceCodeAnalyzer {
 
 	public RegexAnalyzer(SourceFileReader sourceFileReader) {
 		super(sourceFileReader);
 	}
-
+	
+	/**
+	 * The method calculateLOC calculates the Lines of Code of the file
+	 * specified.
+	 * 
+	 * @param filepath A string variable.
+	 * @return int The number of lines is int.
+	 * @throws IOException The fileReader can throw an IOException.
+	 */
 	public int calculateLOC(String filepath) throws IOException {
 		String sourceCode = fileReader.readFileIntoString(filepath);
 		Pattern pattern = Pattern.compile("((//.*)|(/\\*.*)|(\\*+.*))");
@@ -29,6 +45,14 @@ public class RegexAnalyzer extends SourceCodeAnalyzer {
 		return loc;
 	}
 
+	/**
+	 * The method calculateNOM calculates the number of methods in the file
+	 * specified.
+	 * 
+	 * @param filepath A string variable.
+	 * @return int The number of methods is int.
+	 * @throws IOException The fileReader can throw an IOException.
+	 */
 	@Override
 	public int calculateNOM(String filepath) throws IOException {
 		String sourceCode = this.fileReader.readFileIntoString(filepath);
@@ -42,6 +66,14 @@ public class RegexAnalyzer extends SourceCodeAnalyzer {
 		return classCounter;
 	}
 
+	/**
+	 * The method calculateNOC calculates the number of classes in the file
+	 * specified.
+	 * 
+	 * @param filepath A string variable.
+	 * @return int The number of classes is int.
+	 * @throws IOException The fileReader can throw an IOException.
+	 */
 	@Override
 	public int calculateNOC(String filepath) throws IOException {
 		List<String> sourceCodeList =  this.fileReader.readFileIntoList(filepath);
