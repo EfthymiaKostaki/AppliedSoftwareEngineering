@@ -110,7 +110,7 @@ You can execute the system (after building with maven) with the following comman
 java –jar “jar-with-dependencies” arg0 arg1 arg2 arg3 arg4
 ```
 where:
-+ arg0 = “JavaSourceCodeInputFile” (e.g., src/test/resources/TestClass.java)
++ arg0 = “JavaSourceCodeInputFile” (e.g., ../src/test/resources/TestClass.java)
 + arg1 = “sourceCodeAnalyzerType” [regex|strcomp]
 + arg2 = “SourceCodeLocationType” [local|web]
 + arg3 = “OutputFilePath” (e.g., ../output_metrics_file)
