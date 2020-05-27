@@ -50,7 +50,8 @@ java –jar SourceCodeAnalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./src/te
 ## Design Patterns used in this module
 
 ### Facade Pattern
-
+The FacadeAnalyzer class serves as a front-facing interface masking more complex underlying or
+structural code of codeanalyzer subpackages. 
 
 #### Benefits
 1. According to the requirements, the plan is to use the system as an independent library and thus hide any
@@ -67,7 +68,7 @@ This implementation of the facade pattern doesn't force us to unwanted tradeoffs
 Sometimes the pattern can be overused in simple scenarios, which will lead to redundant implementations but this is not the case in this situation 
 since it was explicitly specified in the requirements of the system.
 
-###Strategy Pattern
+### Strategy Pattern
 
 #### Benefits
 
