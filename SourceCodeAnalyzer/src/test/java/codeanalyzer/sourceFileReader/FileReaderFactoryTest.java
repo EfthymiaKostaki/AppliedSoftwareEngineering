@@ -1,7 +1,5 @@
 package codeanalyzer.sourceFileReader;
 
-import static org.junit.Assert.assertNull;
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -19,9 +17,8 @@ public class FileReaderFactoryTest {
 		Assert.assertTrue(fileReader instanceof  WebFileReader);
 	}
 	
-	@Test
-	public void testReadFileNull(){
-		SourceFileReader fileReader = fileReaderFactory.createFileReader("non-existing-type");
-		assertNull(fileReader);
+	@Test(expected = IllegalArgumentException.class)
+	public void testCreateFileReaderUnknown() {
+		fileReaderFactory.createFileReader("non-existing-type");
 	}
 }

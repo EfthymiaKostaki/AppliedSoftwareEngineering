@@ -25,7 +25,7 @@ public class FileReaderFactory {
 		} else if (fileReaderType.equals("web")) {
 			sourceFileReader = new WebFileReader();
 		} else {
-			return null;
+			throw new IllegalArgumentException("Unknown type : " + fileReaderType);
 		}
 		return sourceFileReader;
 	}
