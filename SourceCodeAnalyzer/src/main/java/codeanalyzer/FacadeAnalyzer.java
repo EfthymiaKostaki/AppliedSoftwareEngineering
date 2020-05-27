@@ -54,7 +54,7 @@ public class FacadeAnalyzer {
 				
 		ExporterFactory exporterFactory = new ExporterFactory();
 		FileExporter fileExporter = exporterFactory.createFileExporter(outputFileType);
-		fileExporter.writeFile(metrics, filepath);
+		fileExporter.writeFile(metrics, outputFilePath);
 	}
 
 }
