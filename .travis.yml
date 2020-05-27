@@ -11,3 +11,10 @@ branches:
 
 script: 
   - mvn clean package jacoco:report
+
+after_script:
+  - cd SourceCodeAnalyzer/
+  - cd target/
+  - java -jar SourceCodeAnalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ../src/test/resources/TestClass.java regex local ../travis_output_metrics_file csv
+  - cd ..
+  - diff -s output_metrics_file.csv travis_output_metrics_file.csv
