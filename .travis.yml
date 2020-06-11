@@ -19,5 +19,5 @@ after_script:
   - cd ..
   - diff -s output_metrics_file.csv travis_output_metrics_file.csv
   
-  after_success:
-- bash <(curl -s https://codecov.io/bash) -t dd58806f-2d5b-4a31-9154-94be13e8c55f
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t dd58806f-2d5b-4a31-9154-94be13e8c55f
