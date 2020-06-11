@@ -1,6 +1,7 @@
 # Applied Software Engineering Lab Projects
 
 [![Build Status](https://travis-ci.com/EfthymiaKostaki/AppliedSoftwareEngineering.svg?token=AvLEFzGby86rqSftyr5s&branch=master)](https://travis-ci.com/EfthymiaKostaki/AppliedSoftwareEngineering)
+[![codecov](https://codecov.io/gh/EfthymiaKostaki/AppliedSoftwareEngineering/branch/master/graph/badge.svg)](https://codecov.io/gh/EfthymiaKostaki/AppliedSoftwareEngineering)
 
 This is the main repository for delivery of all the individual projects for the course "Applied Software Engineering".
 
