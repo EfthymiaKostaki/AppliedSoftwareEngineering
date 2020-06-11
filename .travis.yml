@@ -9,6 +9,9 @@ branches:
   - master
   - development
 
+env:
+  global:
+    - CODECOV_TOKEN=:dd58806f-2d5b-4a31-9154-94be13e8c55f
 script: 
   - mvn clean package jacoco:report
 
